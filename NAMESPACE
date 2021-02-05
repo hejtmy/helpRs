@@ -3,5 +3,6 @@
 export(escape_regex)
 export(get_czech_platform_locale)
 export(m_and_sd_report)
+export(mean_and_sd_report)
 export(set_czech_locale)
 export(source_folder)

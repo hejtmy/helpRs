@@ -7,8 +7,15 @@
 #' @export
 #'
 #' @examples
-m_and_sd_report <- function(vec, digits=3){
+mean_and_sd_report <- function(vec, digits = 3){
   m <- round(mean(vec, na.rm = TRUE), digits)
-  s <- round(sd(vec, na.rm=T), digits)
-  return(paste("M = ", m, ", SD = ", s, collapse=""))
+  s <- round(sd(vec, na.rm = TRUE), digits)
+  return(paste0("M = ", m, ", SD = ", s, collapse=""))
+}
+
+#' @export
+#' @describeIn mean_and_sd_report
+m_and_sd_report <- function(vec, digits = 3){
+  .Deprecated(mean_and_sd_report)
+  return(mean_and_sd_report(vec, digits))
 }
